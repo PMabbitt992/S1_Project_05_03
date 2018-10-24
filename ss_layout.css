@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Paige Mabbitt
+   Date: 10.24.18  
+   
+   Filename: ss_layout.css
+
+*/
+
+
+/* Article Styles */
+/* general article position and size set */
+article {
+    float: left;
+    width: 384px;
+}
+
+
+
+/* First Line and Drop Cap Styles */
+/* first line is small caps and a different size, and the first letter is larger and a drop cap */
+article p:first-of-type::first-line {
+    font-variant: small-caps;
+    font-size: 1.25em;
+}
+
+article p:first-of-type::first-letter {
+    float: left;
+    font-size: 4em;
+    font-family: serif;
+    line-height: .8em;
+    margin-bottom: 5px;
+    margin-right: 5px;
+
+}
+
+/* Aside Styles */
+/* aside positioning set */
+aside {
+    float: left;
+    width: 768px;
+}
+
+
+
+/* Map Styles */
+/* map image dimensions and position set*/
+#battleMap {
+    width: 688px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    position: relative;
+}
+
+img#mapImage {
+    display: block;
+    width: 100%;
+}
+
+/* Interactive Map Styles */
+/* markers set in proper positions using absolute positioning(coordinates) */
+#marker1 {
+    position: absolute;
+    top: 220px;
+    left: 340px;
+}
+
+#marker2 {
+    position: absolute;
+    top: 194px;
+    left: 358px;
+}
+
+#marker3 {
+    position: absolute;
+    top: 202px;
+    left: 400px;
+}
+
+#marker4 {
+    position: absolute;
+    top: 217px;
+    left: 452px;
+}
+
+#marker5 {
+    position: absolute;
+    top: 229px;
+    left: 498px;
+}
+
+#marker6 {
+    position: absolute;
+    top: 246px;
+    left: 544px;
+}
+
+
+
+
+/* Map Information Styles */
+/* each section set to appear only once linked marker is hovered over */
+.mapInfo {
+    display: none;
+}
+
+a#marker1:hover+div#info1 {
+    display: block;
+}
+
+a#marker2:hover+div#info2 {
+    display: block;
+}
+
+a#marker3:hover+div#info3 {
+    display: block;
+}
+
+a#marker4:hover+div#info4 {
+    display: block;
+}
+
+a#marker5:hover+div#info5 {
+    display: block;
+}
+
+a#marker6:hover+div#info6 {
+    display: block;
+}
